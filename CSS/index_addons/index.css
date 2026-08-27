@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(220, 231, 228);
+}
+
+.navbar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    border-radius: 2%; /* Hotbar total não costuma ter borda arredondada nas pontas */
+    background-color: rgba(48, 115, 177, 0.726); 
+    backdrop-filter: blur(5px); 
+    border-bottom: 1px solid #658086;
+    z-index: 1000; 
+    padding: 1.2% 0%; /* Espaçamento interno vertical em % */
+}
+
+.nav-container {
+    max-width: 100%; 
+    width: 90%; /* Ocupa 90% da largura da tela */
+    margin: 0% auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Alinha o texto verticalmente no centro da barra */
+    padding: 0% 2%; /* Distância interna das bordas em % */
+}
+
+/* Nome no cantinho esquerdo */
+.nav-logo {
+    color: #181406de;
+    font-size: 1.3rem; /* Mantido o tamanho do texto original */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: hand;
+}
+
+/* Links de navegação na direita */
+.nav-links {
+    display: flex;
+    list-style: none;
+    
+}
+
+.nav-links a {
+    padding: 10px 15px; /* Ajustei um pouco o padding lateral para o fundo não colar no texto */
+    color: #040e1f;
+    text-decoration: none;
+    font-size: 0.95rem; 
+    font-family: sans-serif;
+    display: inline-block; /* Necessário para que o transform (scale) funcione perfeitamente */
+    
+    /* VALOR PADRÃO: Defina as propriedades iniciais para a transição funcionar */
+    background-color: rgba(74, 67, 48, 0); /* Começa transparente */
+    border-radius: 10vw;
+    
+    /* TRANSIÇÃO: Diz ao navegador para suavizar todas as mudanças em 0.3 segundos */
+    transition: color 0.3s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #aeb106;
+    background-color: #043b83;
+    /* Em vez de mudar font-size, usamos o scale para o efeito visual de crescimento */
+    transform: scale(1.15); 
+}
