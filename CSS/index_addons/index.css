@@ -7,47 +7,47 @@
 body{
     background-color: rgb(220, 231, 228);
 }
-
+/*Classe que eu coloc na nave bar para definir o local e todo o background em si*/
 .navbar {
     position: fixed;
     top: 0%;
     left: 0%;
     width: 100%;
-    border-radius: 2%; /* Hotbar total não costuma ter borda arredondada nas pontas */
-    background-color: rgba(48, 115, 177, 0.726); 
+    background-color: rgba(48, 115, 177, 0.384); 
     backdrop-filter: blur(5px); 
     border-bottom: 1px solid #658086;
     z-index: 1000; 
     padding: 1.2% 0%; /* Espaçamento interno vertical em % */
 }
-
+/*Essa aqui já pega todos os itens e coloca em ordem e cria o espaçamento da logo prar a lista*/
 .nav-container {
     max-width: 100%; 
-    width: 90%; /* Ocupa 90% da largura da tela */
+    width: 90%; /* O quanto vai ocupar da tela*/
     margin: 0% auto;
     display: flex;
     justify-content: space-between; 
-    align-items: center; /* Alinha o texto verticalmente no centro da barra */
-    padding: 0% 2%; /* Distância interna das bordas em % */
+    align-items: center;
+    padding: 0% 2%; /*Distancia interna padrão de cada borda (Eu posso modificar de determinados <> no seu espaço fixo)*/
 }
 
-/* Nome no cantinho esquerdo */
+/* Nome no cantinho esquerdo da nav bar */
 .nav-logo {
     color: #181406de;
-    font-size: 1.3rem; /* Mantido o tamanho do texto original */
+    font-size: 1.3rem; /*Ainda n peguei muito bem oq seria rem.. Mas é uma medida.*/
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
     cursor: hand;
 }
 
-/* Links de navegação na direita */
+/* Lista dos "link's" que fica na direita - possivél lugar da barra de pesquisa */
 .nav-links {
     display: flex;
     list-style: none;
     
 }
 
+/*"a" = cada item de navegação */
 .nav-links a {
     padding: 10px 15px; /* Ajustei um pouco o padding lateral para o fundo não colar no texto */
     color: #040e1f;
@@ -65,8 +65,76 @@ body{
 }
 
 .nav-links a:hover {
-    color: #aeb106;
-    background-color: #043b83;
+    color: #6c7e07;
+    background-color: #043b8398;
     /* Em vez de mudar font-size, usamos o scale para o efeito visual de crescimento */
     transform: scale(1.15); 
+}
+
+.nav-links a:active {
+    color: #48501a;
+    background-color: #043b83;
+    transform: scale(1.3); 
+}
+
+/* Estilo para o formulário de pesquisa */
+.nav-links .pesquisa-hidden {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2f5f6;
+    border: 1px solid #2d6a77cb;
+    border-radius: 10px;
+}
+
+.nav-container .pesquisa-hidden span {
+    transition: color 0.7s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #2d6a77dc;
+}
+
+.nav-container .pesquisa-hidden span:hover {
+    color: #043b83;
+    font-size: 1.1rem;
+}
+.nav-links .pesquisa-hidden input{
+    background-color: #f2f5f6;
+    width: 28px;
+    height: 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.nav-links .pesquisa-hidden input::placeholder {
+    padding: 6px;
+    color: transparent; /* deixa o placeholder invisível */
+    margin-left: 3px; /* Espaçamento entre o place holder e a lateral direita (sim, ele ta modificando a distancia com a lateral diretia assim...)*/
+}
+
+.nav-links .pesquisa-hidden input:hover {
+    width: 150px;
+    height: 30px;
+    transition: width 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-links .pesquisa-hidden input:focus{
+    border: none;
+    outline: none;
+
+    width: 150px;
+    height: 34px;
+
+    transition: width 0.3s ease;
+
+    font-size: 0.9rem;
+    gap: 5px;
+    padding: 10px;
+}
+
+.nav-links .pesquisa-hidden input:focus::placeholder{
+    color: #000;
 }
