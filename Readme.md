@@ -1,1 +1,1 @@
-# Continuar desistindo é um ato de persistência.a
+# Continuar desistindo é um ato de persistência.
