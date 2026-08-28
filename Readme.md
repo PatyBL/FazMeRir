@@ -1,1 +1,1 @@
-# Eu sou UM *R O N A L D O*
+# Continuar desistindo é um ato de persistência.
