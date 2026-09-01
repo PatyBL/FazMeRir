@@ -17,13 +17,13 @@ body{
     backdrop-filter: blur(5px); 
     border-bottom: 1px solid #658086;
     z-index: 1000; 
-    padding: 1% 0%; /* Espaçamento interno vertical em % */
+    padding: 1.2% 0%; /* Espaçamento interno vertical em % */
 }
 /*Essa aqui já pega todos os itens e coloca em ordem e cria o espaçamento da logo prar a lista*/
 .nav-container {
     max-width: 100%; 
     width: 90%; /* O quanto vai ocupar da tela*/
-    margin: 0px auto;
+    margin: 0% auto;
     display: flex;
     justify-content: space-between; 
     align-items: center;
